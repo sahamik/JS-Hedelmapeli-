@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedelmäpeli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="title">
+        <h1>HEDELMÄPELI</h1>
+    </div>
+    <div id="game">
+        <div id="winTable">
+            <div id="table1">
+                <img src="/images/cherry.jpg">
+                <img src="/images/cherry.jpg">
+                <img src="/images/cherry.jpg">
+                <img src="/images/cherry.jpg">
+                <span class="multiplier">= 3x</span>
+            </div>
+            <div id="table2">
+                <img src="/images/pear.jpg">
+                <img src="/images/pear.jpg">
+                <img src="/images/pear.jpg">
+                <img src="/images/pear.jpg">
+                <span class="multiplier">= 4x</span>
+            </div>
+            <div id="table3">
+                <img src="/images/watermelon.png">
+                <img src="/images/watermelon.png">
+                <img src="/images/watermelon.png">
+                <img src="/images/watermelon.png">
+                <span class="multiplier">= 5x</span>
+            </div>
+            <div id="table4">
+                <img src="/images/apple.jpg">
+                <img src="/images/apple.jpg">
+                <img src="/images/apple.jpg">
+                <img src="/images/apple.jpg">
+                <span class="multiplier">= 6x</span>
+            </div>
+            <div id="table5">
+                <img src="/images/seiska.png">
+                <img src="/images/seiska.png">
+                <img src="/images/seiska.png">
+                <img src="/images/seiska.png">
+                <span class="multiplier">= 10x</span>
+            </div>
+        </div>
+        <div id="slot-machine">
+            <div class="roll-line">
+                <div id="roll1"><img src="/images/apple.jpg"></div>
+                <div id="roll2"><img src="/images/cherry.jpg"></div>
+                <div id="roll3"><img src="/images/pear.jpg"></div>
+                <div id="roll4"><img src="/images/watermelon.png"></div>
+            </div>
+        </div>
+        <div id="money-bet">
+            <h3 id="bank">RAHAA: <span id= "bankAmount">50</span>€</h3>
+            <div id="money"></div>
+            <h3 id="bets">PANOS: <span id="currentBet">1</span>€</h3>
+            <div id="bet">
+                <div id="bet1">
+                    <button id="betBtn1" onclick="changeBet(1)">
+                        <img src="/images/coin.png">
+                        <p>1€</p>
+                    </button>
+                </div>
+                <div id="bet2">
+                    <button id="betBtn2" onclick="changeBet(2)">
+                        <img src="/images/coin.png">
+                        <p>2€</p>
+                    </button>
+                </div>
+                <div id="bet3">
+                    <button id="betBtn3" onclick="changeBet(3)">
+                        <img src="/images/coin.png">
+                        <p>3€</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="play">
+            <button id="playBtn" onclick="setBet(); play();">PELAA</button>
+        </div>
+        <div id="lockButtons">
+            <div id="lockBtn">
+                <button id="lockBtn1" onclick="toggleLock('lockBtn1')">
+                    <img src="/images/lock0.png" alt="">
+                </button>
+            </div>
+            <div id="lockBtn">
+                <button id="lockBtn2" onclick="toggleLock('lockBtn2')">
+                    <img src="/images/lock0.png" alt="">
+                </button>
+            </div>
+            <div id="lockBtn">
+                <button id="lockBtn3" onclick="toggleLock('lockBtn3')">
+                    <img src="/images/lock0.png" alt="">
+                </button>
+            </div>
+            <div id="lockBtn">
+                <button id="lockBtn4" onclick="toggleLock('lockBtn4')">
+                    <img src="/images/lock0.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div id="new-game">
+            <button id="newGameBtn" onclick="newGame()">UUSI PELI</button>
+        </div>
+        <div class="winTextArea">
+            <div id="winText"></div>
+        </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
