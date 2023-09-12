@@ -155,8 +155,8 @@ const winCombinations = [
 
 //Tutkitaan tuliko voittoa
 function checkWin(roll) {
-    for (const combo of winCombinations) {
-        const [fruit1, fruit2, fruit3 ,fruit4, multiplier] = combo;
+    for (let winningCombination of winCombinations) {
+        const [fruit1, fruit2, fruit3 ,fruit4, multiplier] = winningCombination;
 
         if (roll[0].src.endsWith(fruit1) &&
             roll[1].src.endsWith(fruit2) &&
